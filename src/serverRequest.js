@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let payload = 'name=' + encodeURIComponent(document.getElementById('value').value);
 
         const request = new XMLHttpRequest()
-        request.open('POST', 'http://34.125.30.252:8080/cgi-bin/script.cgi', true)
+        request.open('POST', 'http://35.236.214.95:8080/cgi-bin/script.cgi', true)
 
         request.onload =  function () {
             let requestResult = parseInt(request.responseText.replace(/[^\d.]/g, ''));
