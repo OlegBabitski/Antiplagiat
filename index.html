@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>text.AI</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" href="src/index.css">
+	<link rel="shortcut icon" href="src/favicon.ico">
+</head>
+<body>
+<div class="wrapper">
+	<div id="particles-js" class="particles"></div>
+
+	<div class="container">
+		<header class="header">
+			<h1 class="header__title">
+				text.AI
+			</h1>
+			<h2 id = "subtitle" class="header__subtitle">
+				Intelligent App for text processing
+			</h2>
+		</header>
+
+		<main class="main">
+
+			<div id="resultBlock" class="main__result result hide">
+				<div class="result__info">
+					<img src="src/result.png" alt="Brain" class="result__image">
+					<h2 id="resultTitle" class="result__text"></h2>
+				</div>
+				<button id="back" class="result__button button-form">Back</button>
+			</div>
+
+			<div id="content" class="main__content">
+				<div class="main__form form">
+					<div class="form__top">
+						<textarea name="userInput" id="value" placeholder="Input text..." class="form__textarea" ></textarea>
+					</div>
+					<div class="form__bottom">
+						<div id="form__select"></div>
+						<button type="button" id="send" class="form__button button-form">Check</button>
+					</div>
+				</div>
+
+				<div class="main__image ibg">
+					<img src="src/main.jpg" alt="Brain" class="ibg">
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<a href="#" class="footer__logo">
+				<img src="src/logo.png" alt="DevIncubator" class="footer__logo-img">
+			</a>
+
+			<h2 class="footer__title">
+				Nikita Telesh & Oleg Babitski, 2021
+			</h2>
+
+			<div class="footer__links">
+				<a href="#" class="footer__link">
+					<svg xmlns="http://www.w3.org/2000/svg"><path d="M20 .813c-11.044 0-20 8.954-20 20 0 8.836 5.73 16.333 13.677 18.978 1 .185 1.367-.434 1.367-.962 0-.477-.019-2.053-.027-3.724-5.564 1.21-6.739-2.36-6.739-2.36-.909-2.311-2.22-2.926-2.22-2.926-1.815-1.241.137-1.216.137-1.216 2.008.141 3.065 2.061 3.065 2.061 1.784 3.058 4.68 2.174 5.82 1.663.18-1.293.698-2.175 1.27-2.675-4.442-.505-9.112-2.22-9.112-9.884 0-2.183.782-3.967 2.061-5.368-.207-.504-.893-2.538.194-5.293 0 0 1.68-.537 5.501 2.05A19.174 19.174 0 0120 10.484c1.7.008 3.412.23 5.01.673 3.818-2.587 5.495-2.05 5.495-2.05 1.088 2.755.404 4.79.196 5.293 1.282 1.4 2.059 3.185 2.059 5.368 0 7.682-4.68 9.373-9.133 9.868.718.621 1.357 1.838 1.357 3.704 0 2.676-.024 4.83-.024 5.489 0 .532.36 1.156 1.374.96C34.277 37.14 40 29.646 40 20.812c0-11.046-8.954-20-20-20z"/></svg>
+				</a>
+				<a href="#" class="footer__link">
+					<svg xmlns="http://www.w3.org/2000/svg"><path d="M36.25 0.812988H3.75C1.6875 0.812988 0 2.50049 0 4.56299V37.063C0 39.1255 1.6875 40.813 3.75 40.813H36.25C38.3125 40.813 40 39.1255 40 37.063V4.56299C40 2.50049 38.3125 0.812988 36.25 0.812988ZM32.3984 28.813L28.7422 28.8677C28.7422 28.8677 27.9531 29.0239 26.9219 28.313C25.5547 27.3755 24.2656 24.9302 23.2578 25.2505C22.2422 25.5708 22.2734 27.7661 22.2734 27.7661C22.2734 27.7661 22.2812 28.2349 22.0469 28.4849C21.7969 28.7583 21.2969 28.813 21.2969 28.813H19.6641C19.6641 28.813 16.0547 29.0317 12.875 25.7192C9.40625 22.1099 6.34375 14.9458 6.34375 14.9458C6.34375 14.9458 6.16406 14.4771 6.35938 14.2505C6.57812 13.9927 7.16406 13.9771 7.16406 13.9771L11.0781 13.9536C11.0781 13.9536 11.4453 14.0161 11.7109 14.2114C11.9297 14.3677 12.0469 14.6724 12.0469 14.6724C12.0469 14.6724 12.6797 16.2739 13.5156 17.7192C15.1484 20.5396 15.9141 21.1567 16.4688 20.8599C17.2734 20.4224 17.0312 16.8677 17.0312 16.8677C17.0312 16.8677 17.0469 15.5786 16.625 15.0083C16.2969 14.563 15.6797 14.4302 15.4141 14.3989C15.1953 14.3677 15.5547 13.8599 16.0234 13.6255C16.7266 13.2817 17.9688 13.2583 19.4375 13.2739C20.5781 13.2817 20.9141 13.3599 21.3594 13.4614C22.7109 13.7895 22.25 15.0474 22.25 18.063C22.25 19.0317 22.0781 20.3911 22.7734 20.8364C23.0703 21.0317 23.8047 20.8677 25.6406 17.7505C26.5078 16.2739 27.1641 14.5396 27.1641 14.5396C27.1641 14.5396 27.3047 14.2271 27.5234 14.0942C27.75 13.9614 28.0547 14.0005 28.0547 14.0005L32.1719 13.9771C32.1719 13.9771 33.4062 13.8286 33.6094 14.3911C33.8203 14.9771 33.1484 16.3442 31.4688 18.5864C28.7109 22.2661 28.3984 21.9224 30.6953 24.0474C32.8828 26.0786 33.3359 27.0708 33.4141 27.1958C34.3047 28.6958 32.3984 28.813 32.3984 28.813Z"/></svg>
+				</a>
+				<a href="#" class="footer__link">
+					<svg xmlns="http://www.w3.org/2000/svg"><path d="M38.4 0.812988H1.6C0.715 0.812988 0 1.52799 0 2.41299V39.213C0 40.098 0.715 40.813 1.6 40.813H38.4C39.285 40.813 40 40.098 40 39.213V2.41299C40 1.52799 39.285 0.812988 38.4 0.812988ZM33.78 12.488H30.585C28.08 12.488 27.595 13.678 27.595 15.428V19.283H33.575L32.795 25.318H27.595V40.813H21.36V25.323H16.145V19.283H21.36V14.833C21.36 9.66799 24.515 6.85299 29.125 6.85299C31.335 6.85299 33.23 7.01799 33.785 7.09299V12.488H33.78Z"/></svg>
+				</a>
+			</div>
+		</footer>
+	</div>
+</div>
+
+	<script src="src/ibg.js"></script>
+	<script src="src/particles.js"></script>
+	<script src="src/select.js"></script>
+	<script src="src/app.js"></script>
+	<script src="src/serverRequest.js"></script>
+
+</body>
+</html>
